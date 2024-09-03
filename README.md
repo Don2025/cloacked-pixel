@@ -113,3 +113,16 @@ $ cat flag.txt
 bugku{Ni_You_dUi_xi@ng_m@_doge} 
 ```
 
+## Support for Python3
+
+It works! 
+
+```bash
+$ pip install pycryptodome
+$ python lsb_py3.py extract flag.png flag.txt youknowyouloveme
+[+] Image size: 1885x849 pixels.
+[+] Written extracted data to out.txt.
+$ cat flag.txt 
+bugku{Ni_You_dUi_xi@ng_m@_doge} 
+```
+
