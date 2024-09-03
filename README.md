@@ -40,7 +40,7 @@ Encrypt and hide an archive:
     [+] samples/secret.zip embedded successfully!
 
 
- 
+
 Original image:
 
 ![original image](images/orig.jpg)
@@ -48,7 +48,7 @@ Original image:
 Image with 75k archive embedded:
 
 ![Embedded archive](images/stego.jpg)
- 
+
 Extract
 -------
 
@@ -85,7 +85,31 @@ Now let’s analyse the original:
 
 Notes
 -----
- 
+
  - It is entirely possible to have images with the mean of LSBs already very close to 0.5. In this case, this method will produce false positives.
  - More elaborate theoretical methods also exist, mostly based on statistics. However, false positives and false negatives cannot be completely eliminated.
+
+## Configuration
+
+```bash
+$ curl https://bootstrap.pypa.io/pip/2.7/get-pip.py -o get-pip.py
+$ sudo python2 get-pip2.py
+$ pip2 config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple
+$ pip2 config list
+$ pip2 install numpy
+$ pip2 install matplotlib
+$ sudo apt-get install python-tk
+$ pip2 install Pillow
+$ pip2 install pycryptodome
+```
+
+## Example
+
+```bash
+$ python2 lsb.py extract flag.png flag.txt youknowyouloveme
+[+] Image size: 1885x849 pixels.
+[+] Written extracted data to flag.txt.
+$ cat flag.txt 
+bugku{Ni_You_dUi_xi@ng_m@_doge} 
+```
 
